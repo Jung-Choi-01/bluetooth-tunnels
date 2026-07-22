@@ -1,0 +1,8 @@
+{
+    "joyhub-vibrator": {
+        "static": {
+            "type": "range",
+            "value": "0-99"
+        }
+    } 
+}
