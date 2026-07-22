@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { base } from '$app/paths';
+  import { asset } from '$app/paths';
 
   type RequestConfig = {
     type: string;
@@ -62,7 +62,7 @@
   }
 
   onMount(async () => {
-    const response = await fetch(`${base}/message_config.json`);
+    const response = await fetch(asset('/message_config.json'));
     const json = await response.json();
     config = parseConfig(json as ConfigJson);
     console.log(config);
