@@ -1,6 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
+  const BASE = import.meta.env.BASE_URL ?? '';
+
   type RequestConfig = {
     type: string;
     value: string;
@@ -61,7 +63,7 @@
   }
 
   onMount(async () => {
-    const response = await fetch("/message_config.json");
+    const response = await fetch(`${BASE}message_config.json`);
     const json = await response.json();
     config = parseConfig(json as ConfigJson);
     console.log(config);
