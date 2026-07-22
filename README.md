@@ -13,7 +13,13 @@ since bluetooth protocols are obscured and much more device-specific than i thou
 ### 3. expose your localhost somehow
 normally, you can do this by port forwarding, but i'm really lazy and use localtunnel. none of their code is included in this project, but you can just run this project and then set localtunnel to the port flask is running on (5000 here).
 
-### can i use this?
+### steps to run (with my specific setup)
+1. start python flask server
+2. start localtunnel on port 5000
+3. find a friend, give them the github page, inform them to supply the URL localtunnel gave me
+4. woahhhhh wtf wow!!
+
+### how can i modify this for my devices?
 yeah sure, if you feel like figuring out your target device's mac address and the rules it has around the connection UUID. here's how i figured those out for [my specific device](https://www.amazon.com/dp/B0GD7MMP69):
 1. turn on bluetooth hci snooping in android developer settings
 2. make a few requests to your device
