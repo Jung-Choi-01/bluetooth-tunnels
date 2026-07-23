@@ -79,4 +79,3 @@ var e=({status:e,message:t})=>`<!doctype html>
 	</body>
 </html>
 `;export{e as default};
-//# sourceMappingURL=Bjy-W4x2.js.map
