@@ -45,17 +45,15 @@
   <div>
     <input bind:value={url} placeholder="URL" />
     <select bind:value={device}>
-      {#if config}
-        {#each Object.entries(config) as [deviceId]}
-          <option value={deviceId}>{deviceId}</option>
-        {/each}
-      {/if}
+      {#each Object.entries(config) as [deviceId]}
+        <option value={deviceId}>{deviceId}</option>
+      {/each}
     </select>
   </div>
 
   <div>Status: {status}</div>
 
-  {#if config && device}
+  {#if device}
     {@const requests = config[device]}
     {#if requests}
       {#each Object.entries(requests) as [requestId, requestConfig]}
