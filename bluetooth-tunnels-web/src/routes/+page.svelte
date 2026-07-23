@@ -10,8 +10,9 @@
   type RequestStatus = "idle" | "waiting..." | "success" | "failed";
 
   let url = $state("");
-  let device = $state("");
   const config: Config = json as Config;
+  const initialDevice = Object.keys(config).find((id) => id !== "none") ?? "";
+  let device = $state(initialDevice);
   let status: RequestStatus = $state("idle");
 
   function buildRequestUrl(deviceId: string, requestId: string, value?: string) {
@@ -64,8 +65,8 @@
               type="range"
               oninput={(event) => handleRangeInput(event, device, requestId)}
             />
-		  {:else}
-			input type {requestConfig.type} not found!
+          {:else}
+          input type {requestConfig.type} not found!
           {/if}
         </div>
       {/each}
