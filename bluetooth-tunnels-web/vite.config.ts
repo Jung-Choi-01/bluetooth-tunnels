@@ -13,8 +13,5 @@ export default defineConfig({
 
 			adapter: adapter()
 		})
-	],
-	build: {
-		sourcemap: true
-	}
+	]
 });
